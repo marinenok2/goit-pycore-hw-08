@@ -1,0 +1,67 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1100" height="1190" viewBox="0 0 1100 1190">
+<defs><marker id="triangle" markerWidth="16" markerHeight="16" refX="14" refY="8" orient="auto"><path d="M1 1 L14 8 L1 15 Z" fill="white" stroke="#263849"/></marker><marker id="arrow" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto"><path d="M1 1 L10 6 L1 11" fill="none" stroke="#263849"/></marker><marker id="compose" markerWidth="18" markerHeight="14" refX="1" refY="7" orient="auto"><path d="M1 7 L8 1 L15 7 L8 13 Z" fill="#263849" stroke="#263849"/></marker><marker id="aggregate" markerWidth="18" markerHeight="14" refX="1" refY="7" orient="auto"><path d="M1 7 L8 1 L15 7 L8 13 Z" fill="white" stroke="#263849"/></marker></defs>
+<rect width="1100" height="100%" fill="#fffdf6"/>
+<path d="M160.0 240 L495.0 175" fill="none" stroke="#263849" stroke-width="2" marker-end="url(#triangle)"/>
+<path d="M500.0 240 L495.0 175" fill="none" stroke="#263849" stroke-width="2" marker-end="url(#triangle)"/>
+<path d="M855.0 240 L495.0 175" fill="none" stroke="#263849" stroke-width="2" marker-end="url(#triangle)"/>
+<path d="M520.0 460 L160.0 350" fill="none" stroke="#263849" stroke-width="2" marker-start="url(#compose)"/>
+<text x="340.0" y="396.0" text-anchor="middle" font-family="Arial" font-size="15" fill="#263849" stroke="#fffdf6" stroke-width="5" paint-order="stroke">name: 1</text>
+<path d="M520.0 460 L500.0 350" fill="none" stroke="#263849" stroke-width="2" marker-start="url(#compose)"/>
+<text x="510.0" y="396.0" text-anchor="middle" font-family="Arial" font-size="15" fill="#263849" stroke="#fffdf6" stroke-width="5" paint-order="stroke">phones: 0..*</text>
+<path d="M520.0 460 L855.0 375" fill="none" stroke="#263849" stroke-width="2" marker-start="url(#compose)"/>
+<text x="687.5" y="408.5" text-anchor="middle" font-family="Arial" font-size="15" fill="#263849" stroke="#fffdf6" stroke-width="5" paint-order="stroke">birthday: 0..1</text>
+<path d="M350 942.5 L290 892.5" fill="none" stroke="#263849" stroke-width="2" marker-end="url(#triangle)"/>
+<path d="M520.0 850 L520.0 770" fill="none" stroke="#263849" stroke-width="2" marker-start="url(#aggregate)"/>
+<text x="520.0" y="801.0" text-anchor="middle" font-family="Arial" font-size="15" fill="#263849" stroke="#fffdf6" stroke-width="5" paint-order="stroke">records: 0..*</text>
+<rect x="350" y="40" width="290" height="135" fill="#edf5f5" stroke="#263849" stroke-width="2"/>
+<text x="495.0" y="69" text-anchor="middle" font-family="Arial" font-size="21" font-weight="bold">Field</text>
+<path d="M350 82 h290" stroke="#263849"/>
+<text x="362" y="105" font-family="Arial" font-size="17">+ value: object</text>
+<path d="M350 115 h290" stroke="#263849"/>
+<text x="362" y="139" font-family="Arial" font-size="16">+ __init__(value)</text>
+<text x="362" y="164" font-family="Arial" font-size="16">+ __str__(): str</text>
+<rect x="30" y="240" width="260" height="110" fill="#edf5f5" stroke="#263849" stroke-width="2"/>
+<text x="160.0" y="269" text-anchor="middle" font-family="Arial" font-size="21" font-weight="bold">Name</text>
+<path d="M30 282 h260" stroke="#263849"/>
+<path d="M30 315 h260" stroke="#263849"/>
+<text x="42" y="339" font-family="Arial" font-size="16">+ __init__(value)</text>
+<rect x="370" y="240" width="260" height="110" fill="#edf5f5" stroke="#263849" stroke-width="2"/>
+<text x="500.0" y="269" text-anchor="middle" font-family="Arial" font-size="21" font-weight="bold">Phone</text>
+<path d="M370 282 h260" stroke="#263849"/>
+<path d="M370 315 h260" stroke="#263849"/>
+<text x="382" y="339" font-family="Arial" font-size="16">+ __init__(value)</text>
+<rect x="710" y="240" width="290" height="135" fill="#edf5f5" stroke="#263849" stroke-width="2"/>
+<text x="855.0" y="269" text-anchor="middle" font-family="Arial" font-size="21" font-weight="bold">Birthday</text>
+<path d="M710 282 h290" stroke="#263849"/>
+<path d="M710 315 h290" stroke="#263849"/>
+<text x="722" y="339" font-family="Arial" font-size="16">+ __init__(value)</text>
+<text x="722" y="364" font-family="Arial" font-size="16">+ __str__(): str</text>
+<rect x="350" y="460" width="340" height="310" fill="#edf5f5" stroke="#263849" stroke-width="2"/>
+<text x="520.0" y="489" text-anchor="middle" font-family="Arial" font-size="21" font-weight="bold">Record</text>
+<path d="M350 502 h340" stroke="#263849"/>
+<text x="362" y="525" font-family="Arial" font-size="17">+ name: Name</text>
+<text x="362" y="550" font-family="Arial" font-size="17">+ phones: list[Phone]</text>
+<text x="362" y="575" font-family="Arial" font-size="17">+ birthday: Birthday | None</text>
+<path d="M350 585 h340" stroke="#263849"/>
+<text x="362" y="609" font-family="Arial" font-size="16">+ __init__(name)</text>
+<text x="362" y="634" font-family="Arial" font-size="16">+ add_phone(phone)</text>
+<text x="362" y="659" font-family="Arial" font-size="16">+ find_phone(phone)</text>
+<text x="362" y="684" font-family="Arial" font-size="16">+ remove_phone(phone)</text>
+<text x="362" y="709" font-family="Arial" font-size="16">+ edit_phone(old_phone, new_phone)</text>
+<text x="362" y="734" font-family="Arial" font-size="16">+ add_birthday(birthday)</text>
+<text x="362" y="759" font-family="Arial" font-size="16">+ __str__(): str</text>
+<rect x="30" y="850" width="260" height="85" fill="#edf5f5" stroke="#263849" stroke-width="2"/>
+<text x="160.0" y="879" text-anchor="middle" font-family="Arial" font-size="21" font-weight="bold">UserDict</text>
+<path d="M30 892 h260" stroke="#263849"/>
+<text x="42" y="915" font-family="Arial" font-size="17">+ data: dict</text>
+<path d="M30 925 h260" stroke="#263849"/>
+<rect x="350" y="850" width="340" height="185" fill="#edf5f5" stroke="#263849" stroke-width="2"/>
+<text x="520.0" y="879" text-anchor="middle" font-family="Arial" font-size="21" font-weight="bold">AddressBook</text>
+<path d="M350 892 h340" stroke="#263849"/>
+<path d="M350 925 h340" stroke="#263849"/>
+<text x="362" y="949" font-family="Arial" font-size="16">+ add_record(record)</text>
+<text x="362" y="974" font-family="Arial" font-size="16">+ find(name)</text>
+<text x="362" y="999" font-family="Arial" font-size="16">+ delete(name)</text>
+<text x="362" y="1024" font-family="Arial" font-size="16">+ get_upcoming_birthdays(today=None)</text>
+<text x="30" y="1135" font-family="Arial" font-size="17">Triangle: inheritance | filled diamond: composition | empty diamond: aggregation</text>
+<text x="30" y="1165" font-family="Arial" font-size="17">Dashed arrow: dependency | + : public | 0..1 : optional | 0..* : many</text></svg>

@@ -62,21 +62,14 @@ def show_phone(args, book):
     phones = []
     for phone in record.phones:
         phones.append(phone.value)
-    if not phones:
-        return "No phones."
-    return "; ".join(phones)
+    return phones
 
 
 @input_error
 def show_all(args, book):
-    # Команда не потребує аргументів. Кожен контакт виводимо з нового рядка.
+    # Повертаємо об'єкти контактів. Їхній вигляд визначає подання у views.py.
     require_args(args, 0, "all")
-    if not book:
-        return "Address book is empty."
-    contacts = []
-    for record in book.values():
-        contacts.append(str(record))
-    return "\n".join(contacts)
+    return list(book.values())
 
 
 @input_error
@@ -99,12 +92,6 @@ def show_birthday(args, book):
 
 @input_error
 def birthdays(args, book):
-    # Отримуємо список привітань і перетворюємо його на текст для консолі.
+    # Повертаємо дані, а текст для користувача сформує подання.
     require_args(args, 0, "birthdays")
-    upcoming = book.get_upcoming_birthdays()
-    if not upcoming:
-        return "No upcoming birthdays."
-    result = []
-    for contact in upcoming:
-        result.append(f"{contact['birthday']}: {contact['name']}")
-    return "\n".join(result)
+    return book.get_upcoming_birthdays()

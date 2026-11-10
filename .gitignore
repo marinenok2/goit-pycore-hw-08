@@ -3,3 +3,4 @@ __pycache__/
 .venv/
 addressbook.pkl
 addressbook.pkl.tmp
+bot_explained.html
